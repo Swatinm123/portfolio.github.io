@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Fredoka", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    rgb(16, 17, 17),
+    rgb(6, 190, 184)
+  );
+  color: white;
+}
+.container {
+  width: 95%;
+  margin: auto;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  text-wrap: wrap;
+  width: 100%;
+  margin: 5% 0;
+}
+.nav h2 {
+  font-size: 2rem;
+}
+.user-input {
+  width: 350px;
+}
+.user-input input {
+  width: 80%;
+  outline: none;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 5px -5px 10px black;
+}
+.user-input input:focus {
+  box-shadow: 5px -5px 10px black;
+}
+.user-input button {
+  cursor: pointer;
+  padding: 8px;
+  outline: 0.5px solid white;
+  border: none;
+  border-radius: 10px;
+  transition: 1s;
+  width: fit-content;
+  background-color: rgb(16, 16, 15);
+  color: white;
+  box-shadow: 2px -5px 10px black;
+}
+.user-input button:hover {
+  background-color: rgb(34, 142, 181);
+  color: aliceblue;
+}
+
+.todo {
+  width: 500px;
+  margin: auto;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.item:hover {
+  box-shadow: 0 0 20px goldenrod;
+}
+.item i {
+  cursor: pointer;
+}
+
+.child {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5vw 1vw;
+  margin-bottom: 1vw;
+  border-bottom: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgb(0, 0, 0);
+}
+.buttons {
+  display: flex;
+  gap: 1vw;
+}
+@media (max-width: 768px) {
+  .nav {
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav h2 {
+    margin: 4vh 0;
+  }
+  .user-input {
+    width: 100%;
+    text-align: center;
+  }
+  input {
+    margin-bottom: 1vh;
+  }
+  .todo {
+    width: 100%;
+  }
+  .child {
+    padding: 0.8vh 1vh;
+    margin-bottom: 1vh;
+  }
+  .child .task {
+    padding-left: 1vh;
+  }
+  .buttons {
+    display: flex;
+    gap: 2vh;
+  }
+}
+@media (max-width: 480px) {
+  .user-input {
+    width: 74%;
+  }
+}
+@media (max-width: 320px) {
+  .user-input {
+    width: 60%;
+  }
+}
